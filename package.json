@@ -12,11 +12,14 @@
     "type": "git",
     "url": "https://github.com/ascoders/react-native-image-viewer.git"
   },
-  "keywords": ["image-viewer"],
+  "keywords": [
+    "image-viewer"
+  ],
   "author": "ascoders",
   "license": "MIT",
   "dependencies": {
-    "react-native-image-pan-zoom": "^2.0.16"
+    "react-native-image-pan-zoom": "^2.0.16",
+    "react-native-img-cache": "^1.5.3"
   },
   "peerDependencies": {
     "react": "*",

@@ -3,8 +3,8 @@ import {
   Animated,
   CameraRoll,
   Dimensions,
-  Image,
   Platform,
+  Image,
   Text,
   TouchableHighlight,
   TouchableOpacity,
@@ -13,6 +13,7 @@ import {
   ViewStyle
 } from "react-native"
 import ImageZoom from "react-native-image-pan-zoom"
+import { CachedImage } from "react-native-img-cache";
 import styles from "./image-viewer.style"
 import { IImageInfo, IImageSize, Props, State } from "./image-viewer.type"
 
@@ -525,7 +526,7 @@ export default class ImageViewer extends React.Component<Props, State> {
         case "success":
           return (
             <Wrapper key={index} imageWidth={width} imageHeight={height}>
-              <Image
+              <CachedImage
                 style={{
                   ...this.styles.imageStyle,
                   width,
@@ -552,7 +553,7 @@ export default class ImageViewer extends React.Component<Props, State> {
               }
             >
               {this.props.failImageSource && (
-                <Image
+                <CachedImage
                   source={{
                     uri: this.props.failImageSource.url
                   }}
